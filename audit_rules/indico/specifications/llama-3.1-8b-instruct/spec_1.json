@@ -1,0 +1,107 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [],
+ "paths": [
+  {
+   "name": "on_event_team",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "kind",
+     "grant_value": "positive",
+     "revoke_value": "negative",
+     "scope_column": "realm",
+     "scope_ref": "principal",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "event_team",
+     "current_state_scope_column": "event_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "event_team"
+    }
+   ]
+  },
+  {
+   "name": "on_category_team",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "category_log",
+     "source": "category_log",
+     "action_column": "kind",
+     "grant_value": "positive",
+     "revoke_value": "negative",
+     "scope_column": "realm",
+     "scope_ref": "principal",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "category_team",
+     "current_state_scope_column": "category_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "category_team"
+    }
+   ]
+  },
+  {
+   "name": "not_on_any_team",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "kind",
+     "grant_value": "positive",
+     "revoke_value": "negative",
+     "scope_column": "realm",
+     "scope_ref": "principal",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "event_team",
+     "current_state_scope_column": "event_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "event_team"
+    },
+    {
+     "kind": "change_log",
+     "table": "category_log",
+     "source": "category_log",
+     "action_column": "kind",
+     "grant_value": "positive",
+     "revoke_value": "negative",
+     "scope_column": "realm",
+     "scope_ref": "principal",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "category_team",
+     "current_state_scope_column": "category_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "category_team"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

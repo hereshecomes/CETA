@@ -1,0 +1,81 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "user_name",
+   "lookup_table": "users",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "principal",
+   "lookup_value_expr": "full_name"
+  },
+  {
+   "name": "category_id",
+   "lookup_table": "events",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "operation.event_id",
+   "lookup_value_expr": "category_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "event_team_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "summary",
+     "grant_value": "ACL entry added",
+     "revoke_value": "ACL entry removed",
+     "scope_column": "event_id",
+     "scope_ref": "operation.event_id",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "scope.user_name",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "event_team",
+     "current_state_scope_column": "event_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "event_team"
+    }
+   ]
+  },
+  {
+   "name": "category_team_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "category_log",
+     "source": "category_log",
+     "action_column": "summary",
+     "grant_value": "ACL entry added",
+     "revoke_value": "ACL entry removed",
+     "scope_column": "category_id",
+     "scope_ref": "scope.category_id",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "scope.user_name",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "category_team",
+     "current_state_scope_column": "category_id",
+     "current_state_subject_column": "user_name",
+     "current_state_source": "category_team"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

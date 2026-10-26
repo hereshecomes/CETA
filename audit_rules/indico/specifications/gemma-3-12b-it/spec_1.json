@@ -1,0 +1,88 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [],
+ "paths": [
+  {
+   "name": "event_team_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "summary",
+     "grant_value": "ACL entry added",
+     "revoke_value": "ACL entry removed",
+     "scope_column": "event_id",
+     "scope_ref": "operation.event_id",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "category_team_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "category_log",
+     "source": "category_log",
+     "action_column": "summary",
+     "grant_value": "ACL entry added",
+     "revoke_value": "ACL entry removed",
+     "scope_column": "category_id",
+     "scope_ref": "operation.category_id",
+     "subject_expr": "json_extract(data, '$.User')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "current_event_team_member",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "event_team",
+     "source": "event_team",
+     "subject_column": "user_name",
+     "subject_ref": "principal",
+     "from_column": "start_dt",
+     "to_column": "end_dt",
+     "id_column": "event_id"
+    }
+   ]
+  },
+  {
+   "name": "current_category_team_member",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "category_team",
+     "source": "category_team",
+     "subject_column": "user_name",
+     "subject_ref": "principal",
+     "from_column": "start_dt",
+     "to_column": "end_dt",
+     "id_column": "category_id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

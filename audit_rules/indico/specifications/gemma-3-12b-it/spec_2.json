@@ -1,0 +1,66 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "event",
+   "ref": "operation.event_id"
+  },
+  {
+   "name": "category",
+   "lookup_table": "events",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "operation.event_id",
+   "lookup_value_expr": "category_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "event_team",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "event_team",
+     "source": "event_team",
+     "subject_column": "user_name",
+     "subject_ref": "principal",
+     "scope_column": "event_id",
+     "scope_ref": "scope.event",
+     "from_column": "start_dt",
+     "to_column": "end_dt",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "category_team",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "category_team",
+     "source": "category_team",
+     "subject_column": "user_name",
+     "subject_ref": "principal",
+     "scope_column": "category_id",
+     "scope_ref": "scope.category",
+     "from_column": "start_dt",
+     "to_column": "end_dt",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

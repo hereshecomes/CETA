@@ -1,0 +1,63 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "event_id",
+   "ref": "operation.event_id"
+  },
+  {
+   "name": "category_id",
+   "ref": "operation.event_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "team_member",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "realm",
+     "scope_ref": "scope.event_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "category_team_member",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "realm",
+     "scope_ref": "scope.category_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

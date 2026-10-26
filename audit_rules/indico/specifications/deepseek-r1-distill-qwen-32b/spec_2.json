@@ -1,0 +1,71 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "category",
+   "lookup_table": "events",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "operation.event_id",
+   "lookup_value_expr": "category_id",
+   "source": "events"
+  },
+  {
+   "name": "user_name",
+   "lookup_table": "users",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "principal",
+   "lookup_value_expr": "full_name",
+   "source": "users"
+  }
+ ],
+ "paths": [
+  {
+   "name": "event_team_membership",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "event_team",
+     "source": "event_team",
+     "subject_column": "event_id",
+     "subject_ref": "operation.event_id",
+     "scope_column": "user_name",
+     "scope_ref": "scope.user_name",
+     "from_column": "valid_from",
+     "to_column": "valid_to",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "category_team_membership",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "category_team",
+     "source": "category_team",
+     "subject_column": "category_id",
+     "subject_ref": "scope.category",
+     "scope_column": "user_name",
+     "scope_ref": "scope.user_name",
+     "from_column": "valid_from",
+     "to_column": "valid_to",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}
