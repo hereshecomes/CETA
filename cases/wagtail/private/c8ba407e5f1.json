@@ -1,0 +1,42 @@
+{
+ "variant": "V1b",
+ "world_id": "approval_order_04__UNAUTH",
+ "base_id": "approval_order_04",
+ "pattern": "approval_order",
+ "split": "test",
+ "world_kind": "UNAUTH",
+ "latent_truth": "unauthorized",
+ "submitted_by_other_in_window": true,
+ "published_revision_approved_in_window": false,
+ "projected_condition_a": true,
+ "projected_condition_b": false,
+ "answerable": true,
+ "answerability_basis": "audit log covers the whole 48 h window: no approval of the published revision",
+ "expected_verdict": "unauthorized",
+ "seed_row_id": 72,
+ "publisher_user_id": 7,
+ "page_id": 4,
+ "revision_id": 31,
+ "window_start": "2026-03-03T15:25:00+00:00",
+ "window_covered": true,
+ "focal_submitter_user_id": 3,
+ "qualifying_submission_rows": [
+  69
+ ],
+ "visible_submission_rows": [
+  69
+ ],
+ "qualifying_approval_rows": [],
+ "visible_approval_rows": [],
+ "proof_alternatives": [
+  [
+   {
+    "source": "source_coverage",
+    "for": "audit_log"
+   }
+  ]
+ ],
+ "coverage_from": "2026-03-03T14:55:00+00:00",
+ "export_time": "2026-03-05T23:00:00+00:00",
+ "case_id": "c8ba407e5f1"
+}

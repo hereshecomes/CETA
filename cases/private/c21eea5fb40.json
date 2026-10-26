@@ -1,0 +1,43 @@
+{
+ "variant": "V0",
+ "world_id": "other_team_04__UNAUTH",
+ "base_id": "other_team_04",
+ "pattern": "other_team",
+ "split": "test",
+ "world_kind": "UNAUTH",
+ "latent_truth": "unauthorized",
+ "answerable": true,
+ "answerability_basis": "token creation record inside audit coverage",
+ "expected_verdict": "unauthorized",
+ "seed_row_id": 43,
+ "token_id": 2,
+ "token_team_id": 2,
+ "issuer_user_id": 4,
+ "creation_row_id": 12,
+ "membership_events": [
+  {
+   "ts": "2026-04-18T15:18:00+00:00",
+   "kind": "removed",
+   "row_id": 36
+  }
+ ],
+ "member_at_event_time": false,
+ "membership_proofs": [
+  {
+   "rule": "R1_last_change_before",
+   "row_ids": [
+    36
+   ]
+  },
+  {
+   "rule": "R3_current_state_no_later_change",
+   "current_membership": {
+    "team_id": 2,
+    "user_id": 4,
+    "member": false
+   }
+  }
+ ],
+ "coverage_from": "2026-04-18T07:30:00+00:00",
+ "case_id": "c21eea5fb40"
+}

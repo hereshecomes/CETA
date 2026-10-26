@@ -1,0 +1,12 @@
+{
+ "case_id": "c4dda16a349",
+ "alert": {
+  "audit_log_id": 71,
+  "ts": "2026-03-05T15:25:00+00:00",
+  "action": "wagtail.publish",
+  "actor_user_id": 7,
+  "page_id": 4,
+  "revision_id": 30
+ },
+ "question": "Was this publication authorized under the organization's content publication policy at the time it was performed? Answer authorized, unauthorized, or insufficient_evidence, and cite the records that establish your answer."
+}

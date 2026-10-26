@@ -1,0 +1,50 @@
+{
+ "variant": "V1b",
+ "world_id": "approval_order_04__AUTH",
+ "base_id": "approval_order_04",
+ "pattern": "approval_order",
+ "split": "test",
+ "world_kind": "AUTH",
+ "latent_truth": "authorized",
+ "submitted_by_other_in_window": true,
+ "published_revision_approved_in_window": true,
+ "projected_condition_a": true,
+ "projected_condition_b": true,
+ "answerable": true,
+ "answerability_basis": "qualifying submission by another user and approval of the published revision both visible",
+ "expected_verdict": "authorized",
+ "seed_row_id": 71,
+ "publisher_user_id": 7,
+ "page_id": 4,
+ "revision_id": 30,
+ "window_start": "2026-03-03T15:25:00+00:00",
+ "window_covered": true,
+ "focal_submitter_user_id": 3,
+ "qualifying_submission_rows": [
+  69
+ ],
+ "visible_submission_rows": [
+  69
+ ],
+ "qualifying_approval_rows": [
+  70
+ ],
+ "visible_approval_rows": [
+  70
+ ],
+ "proof_alternatives": [
+  [
+   {
+    "source": "audit_log",
+    "id": 69
+   },
+   {
+    "source": "audit_log",
+    "id": 70
+   }
+  ]
+ ],
+ "coverage_from": "2026-03-03T14:55:00+00:00",
+ "export_time": "2026-03-05T23:00:00+00:00",
+ "case_id": "c4dda16a349"
+}

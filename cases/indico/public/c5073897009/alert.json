@@ -1,0 +1,11 @@
+{
+ "case_id": "c5073897009",
+ "alert": {
+  "audit_log_id": 29,
+  "ts": "2026-03-09T15:21:00+00:00",
+  "summary": "Title updated",
+  "actor_user_id": 3,
+  "event_id": 1
+ },
+ "question": "Was this change to the event authorized under the organization's event management policy at the time it was performed? Answer authorized, unauthorized, or insufficient_evidence, and cite the records that establish your answer."
+}

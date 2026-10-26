@@ -1,0 +1,34 @@
+[
+ {
+  "case_id": "c230f957c20",
+  "world_id": "approval_order_04__AUTH",
+  "variant": "V0",
+  "base_id": "approval_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c4dda16a349",
+  "world_id": "approval_order_04__AUTH",
+  "variant": "V1b",
+  "base_id": "approval_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c7af6705fd9",
+  "world_id": "approval_order_04__UNAUTH",
+  "variant": "V0",
+  "base_id": "approval_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c8ba407e5f1",
+  "world_id": "approval_order_04__UNAUTH",
+  "variant": "V1b",
+  "base_id": "approval_order_04",
+  "split": "test",
+  "world_ok": true
+ }
+]

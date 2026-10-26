@@ -1,0 +1,34 @@
+{
+ "variant": "V1b",
+ "world_id": "category_removal_order_04__AUTH",
+ "base_id": "category_removal_order_04",
+ "pattern": "category_removal_order",
+ "split": "test",
+ "world_kind": "AUTH",
+ "latent_truth": "authorized",
+ "event_team_at_t": false,
+ "category_team_at_t": true,
+ "projected_event_team": false,
+ "projected_category_team": null,
+ "answerable": false,
+ "answerability_basis": "team membership at t not determinable",
+ "expected_verdict": "insufficient_evidence",
+ "seed_row_id": 29,
+ "actor_user_id": 3,
+ "actor_name": "Ada Varga",
+ "event_id": 1,
+ "category_id": 2,
+ "event_team_change_rows": [],
+ "category_team_change_rows": [
+  11,
+  14
+ ],
+ "proof_alternatives": [],
+ "coverage_from": {
+  "audit_log": "2026-03-05T07:00:00+00:00",
+  "category_log": "2026-03-09T16:21:00+00:00",
+  "app_log": "2026-03-05T07:00:00+00:00"
+ },
+ "export_time": "2026-03-09T23:00:00+00:00",
+ "case_id": "cb3428a6c97"
+}

@@ -1,0 +1,31 @@
+{
+ "variant": "V0",
+ "world_id": "other_team_04__AUTH",
+ "base_id": "other_team_04",
+ "pattern": "other_team",
+ "split": "test",
+ "world_kind": "AUTH",
+ "latent_truth": "authorized",
+ "answerable": true,
+ "answerability_basis": "token creation record inside audit coverage",
+ "expected_verdict": "authorized",
+ "seed_row_id": 43,
+ "token_id": 2,
+ "token_team_id": 2,
+ "issuer_user_id": 4,
+ "creation_row_id": 12,
+ "membership_events": [],
+ "member_at_event_time": true,
+ "membership_proofs": [
+  {
+   "rule": "R3_current_state_no_later_change",
+   "current_membership": {
+    "team_id": 2,
+    "user_id": 4,
+    "member": true
+   }
+  }
+ ],
+ "coverage_from": "2026-04-18T07:30:00+00:00",
+ "case_id": "cefd4182322"
+}

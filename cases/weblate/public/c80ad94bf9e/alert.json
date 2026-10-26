@@ -1,0 +1,12 @@
+{
+ "case_id": "c80ad94bf9e",
+ "alert": {
+  "audit_log_id": 69,
+  "ts": "2026-04-30T00:38:00+00:00",
+  "action": "new",
+  "actor_user_id": 15,
+  "project_id": 1,
+  "unit_id": 20
+ },
+ "question": "Was this operation authorized under the organization's project token policy at the time it was performed? Answer authorized, unauthorized, or insufficient_evidence, and cite the records that establish your answer."
+}

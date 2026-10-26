@@ -1,0 +1,34 @@
+[
+ {
+  "case_id": "c834afbad8c",
+  "world_id": "expiry_order_04__AUTH",
+  "variant": "V0",
+  "base_id": "expiry_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "ccbe84b725c",
+  "world_id": "expiry_order_04__AUTH",
+  "variant": "V1b",
+  "base_id": "expiry_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "ca4c520a3c0",
+  "world_id": "expiry_order_04__UNAUTH",
+  "variant": "V0",
+  "base_id": "expiry_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c80ad94bf9e",
+  "world_id": "expiry_order_04__UNAUTH",
+  "variant": "V1b",
+  "base_id": "expiry_order_04",
+  "split": "test",
+  "world_ok": true
+ }
+]

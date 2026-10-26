@@ -1,0 +1,34 @@
+[
+ {
+  "case_id": "c5073897009",
+  "world_id": "category_removal_order_04__AUTH",
+  "variant": "V0",
+  "base_id": "category_removal_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "cb3428a6c97",
+  "world_id": "category_removal_order_04__AUTH",
+  "variant": "V1b",
+  "base_id": "category_removal_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "cb9519a667f",
+  "world_id": "category_removal_order_04__UNAUTH",
+  "variant": "V0",
+  "base_id": "category_removal_order_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c4c30569c32",
+  "world_id": "category_removal_order_04__UNAUTH",
+  "variant": "V1b",
+  "base_id": "category_removal_order_04",
+  "split": "test",
+  "world_ok": true
+ }
+]

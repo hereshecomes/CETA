@@ -1,0 +1,53 @@
+{
+ "variant": "V0",
+ "world_id": "expiry_order_04__AUTH",
+ "base_id": "expiry_order_04",
+ "pattern": "expiry_order",
+ "split": "test",
+ "world_kind": "AUTH",
+ "latent_truth": "authorized",
+ "token_valid_at_event_time": true,
+ "member_at_event_time": true,
+ "answerable": true,
+ "answerability_basis": "token creation record inside account-log coverage; validity record present",
+ "expected_verdict": "authorized",
+ "seed_row_id": 69,
+ "token_id": 15,
+ "token_team": "Administration",
+ "creator_username": "uren7b",
+ "creator_user_id": 4,
+ "creation_row_id": 36,
+ "token_expires": "2026-04-30T23:59:59.999999+00:00",
+ "membership_events": [],
+ "membership_proofs": [
+  {
+   "rule": "R3_current_state_no_later_change",
+   "current_membership": {
+    "team": "Administration",
+    "username": "uren7b",
+    "present": true
+   }
+  }
+ ],
+ "proof_alternatives": [
+  [
+   {
+    "source": "account_log",
+    "id": 36
+   },
+   {
+    "source": "token_validity",
+    "id": 15
+   },
+   {
+    "source": "team_members",
+    "team": "Administration",
+    "username": "uren7b",
+    "present": true
+   }
+  ]
+ ],
+ "coverage_from": "2026-04-29T07:30:00+00:00",
+ "export_time": "2026-04-30T00:50:00+00:00",
+ "case_id": "c834afbad8c"
+}

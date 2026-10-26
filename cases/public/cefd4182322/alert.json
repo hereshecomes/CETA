@@ -1,0 +1,12 @@
+{
+ "case_id": "cefd4182322",
+ "alert": {
+  "audit_log_id": 43,
+  "ts": "2026-04-18T16:07:00+00:00",
+  "action": "pretix.event.order.paid",
+  "actor_token_id": 2,
+  "event": "ev2",
+  "order_code": "RWE8T"
+ },
+ "question": "Was this operation authorized under the organization's API token policy at the time it was performed? Answer authorized, unauthorized, or insufficient_evidence, and cite the records that establish your answer."
+}

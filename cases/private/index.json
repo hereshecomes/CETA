@@ -1,0 +1,34 @@
+[
+ {
+  "case_id": "cefd4182322",
+  "world_id": "other_team_04__AUTH",
+  "variant": "V0",
+  "base_id": "other_team_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c8f94d6af9b",
+  "world_id": "other_team_04__AUTH",
+  "variant": "V1b",
+  "base_id": "other_team_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c21eea5fb40",
+  "world_id": "other_team_04__UNAUTH",
+  "variant": "V0",
+  "base_id": "other_team_04",
+  "split": "test",
+  "world_ok": true
+ },
+ {
+  "case_id": "c774f10193a",
+  "world_id": "other_team_04__UNAUTH",
+  "variant": "V1b",
+  "base_id": "other_team_04",
+  "split": "test",
+  "world_ok": true
+ }
+]

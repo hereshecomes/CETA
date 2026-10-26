@@ -1,0 +1,49 @@
+{
+ "variant": "V1b",
+ "world_id": "expiry_order_04__UNAUTH",
+ "base_id": "expiry_order_04",
+ "pattern": "expiry_order",
+ "split": "test",
+ "world_kind": "UNAUTH",
+ "latent_truth": "unauthorized",
+ "token_valid_at_event_time": false,
+ "member_at_event_time": true,
+ "answerable": true,
+ "answerability_basis": "token validity record shows the token expired before the operation",
+ "expected_verdict": "unauthorized",
+ "seed_row_id": 69,
+ "token_id": 15,
+ "token_team": "Administration",
+ "creator_username": "uren7b",
+ "creator_user_id": 4,
+ "creation_row_id": null,
+ "token_expires": "2026-04-29T23:59:59.999999+00:00",
+ "membership_events": [],
+ "membership_proofs": [
+  {
+   "rule": "R3_current_state_no_later_change",
+   "current_membership": {
+    "team": "Administration",
+    "username": "uren7b",
+    "present": true
+   }
+  }
+ ],
+ "proof_alternatives": [
+  [
+   {
+    "source": "token_validity",
+    "id": 15
+   }
+  ],
+  [
+   {
+    "source": "source_coverage",
+    "for": "token_validity"
+   }
+  ]
+ ],
+ "coverage_from": "2026-04-29T10:11:30+00:00",
+ "export_time": "2026-04-30T00:50:00+00:00",
+ "case_id": "c80ad94bf9e"
+}
