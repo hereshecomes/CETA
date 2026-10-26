@@ -1,0 +1,67 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [],
+ "paths": [
+  {
+   "name": "authorized_by_policy",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "grant_value": "wagtail.workflow.start",
+     "revoke_value": "wagtail.workflow.cancel",
+     "scope_column": "page_id",
+     "scope_ref": "operation.page_id",
+     "subject_expr": "user_id",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "pages",
+     "current_state_scope_column": "id",
+     "current_state_subject_column": "live",
+     "current_state_source": "pages"
+    },
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "grant_value": "wagtail.workflow.approve",
+     "revoke_value": "wagtail.workflow.reject",
+     "scope_column": "revision_id",
+     "scope_ref": "scope.revision_id",
+     "subject_expr": "user_id",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id"
+    },
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "ts",
+     "subject_ref": "operation.ts",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

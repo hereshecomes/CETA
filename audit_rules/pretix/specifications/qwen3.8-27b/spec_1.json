@@ -1,0 +1,60 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "binding_event",
+  "credential_column": "actor_token_id",
+  "table": "audit_log",
+  "action_column": "action",
+  "action_value": "pretix.team.token.created",
+  "credential_expr": "json_extract(data, '$.id')",
+  "holder_column": "actor_user_id",
+  "time_column": "ts",
+  "id_column": "id",
+  "source": "audit_log"
+ },
+ "scopes": [
+  {
+   "name": "team",
+   "lookup_table": "team_tokens",
+   "lookup_key_expr": "id",
+   "lookup_key_ref": "operation.actor_token_id",
+   "lookup_value_expr": "team_id",
+   "source": "team_tokens"
+  }
+ ],
+ "paths": [
+  {
+   "name": "issuer_is_team_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "grant_value": "pretix.team.member.added",
+     "revoke_value": "pretix.team.member.removed",
+     "scope_column": "object_id",
+     "scope_ref": "scope.team",
+     "subject_expr": "json_extract(data, '$.user')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_members",
+     "current_state_scope_column": "team_id",
+     "current_state_subject_column": "user_id",
+     "current_state_source": "team_members"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

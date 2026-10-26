@@ -1,0 +1,117 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "page",
+   "ref": "operation.page_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "published_by_other",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "page_id",
+     "scope_ref": "operation.page_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    },
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "page_id",
+     "scope_ref": "operation.page_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "within_48_hours",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "page_id",
+     "scope_ref": "operation.page_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    },
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "scope_column": "page_id",
+     "scope_ref": "operation.page_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  },
+  {
+   "name": "submitted_by_other",
+   "conditions": [
+    {
+     "kind": "prior_event",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "action_value": "wagtail.workflow.start",
+     "object_column": "page_id",
+     "object_ref": "operation.page_id",
+     "time_column": "ts",
+     "id_column": "id",
+     "actor_column": "user_id",
+     "actor_must_differ": true
+    }
+   ]
+  },
+  {
+   "name": "approved_within_48_hours",
+   "conditions": [
+    {
+     "kind": "prior_event",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "action_value": "wagtail.workflow.approve",
+     "object_column": "revision_id",
+     "object_ref": "operation.revision_id",
+     "time_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

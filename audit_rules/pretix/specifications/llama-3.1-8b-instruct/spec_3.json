@@ -1,0 +1,94 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "binding_table",
+  "credential_column": "actor_token_id",
+  "table": "team_tokens",
+  "credential_table_column": "id",
+  "holder_column": "issuer_user_id",
+  "source": "team_tokens"
+ },
+ "scopes": [
+  {
+   "name": "team_id",
+   "ref": "operation.team_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "issuer_member",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "grant_value": "pretix.team.token.created",
+     "revoke_value": "pretix.team.token.revoked",
+     "scope_column": "team_id",
+     "scope_ref": "scope.team_id",
+     "subject_expr": "json_extract(data, '$.id')",
+     "subject_ref": "operation.id",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_tokens",
+     "current_state_scope_column": "team_id",
+     "current_state_subject_column": "issuer_user_id",
+     "current_state_source": "team_tokens"
+    },
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "issuer_user_id",
+     "subject_ref": "binding.issuer_user_id",
+     "scope_column": "team_id",
+     "scope_ref": "scope.team_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    },
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "grant_value": "pretix.team.member.added",
+     "revoke_value": "pretix.team.member.removed",
+     "scope_column": "team_id",
+     "scope_ref": "scope.team_id",
+     "subject_expr": "json_extract(data, '$.user_id')",
+     "subject_ref": "binding.issuer_user_id",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_members",
+     "current_state_scope_column": "team_id",
+     "current_state_subject_column": "user_id",
+     "current_state_source": "team_members"
+    },
+    {
+     "kind": "interval",
+     "table": "audit_log",
+     "source": "audit_log",
+     "subject_column": "user_id",
+     "subject_ref": "binding.holder_column",
+     "scope_column": "team_id",
+     "scope_ref": "scope.team_id",
+     "from_column": "ts",
+     "to_column": "ts",
+     "id_column": "id"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

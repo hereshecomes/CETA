@@ -1,0 +1,60 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "column",
+  "column": "user_id"
+ },
+ "scopes": [
+  {
+   "name": "page",
+   "ref": "operation.page_id"
+  },
+  {
+   "name": "revision",
+   "ref": "operation.revision_id"
+  }
+ ],
+ "paths": [
+  {
+   "name": "reviewed_and_approved",
+   "conditions": [
+    {
+     "kind": "prior_event",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "action_value": "wagtail.workflow.start",
+     "object_column": "page_id",
+     "object_ref": "scope.page",
+     "time_column": "ts",
+     "id_column": "id",
+     "actor_column": "user_id",
+     "actor_must_differ": true,
+     "max_age_minutes": 2880
+    },
+    {
+     "kind": "prior_event",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "action",
+     "action_value": "wagtail.workflow.approve",
+     "object_column": "revision_id",
+     "object_ref": "scope.revision",
+     "time_column": "ts",
+     "id_column": "id",
+     "max_age_minutes": 2880
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

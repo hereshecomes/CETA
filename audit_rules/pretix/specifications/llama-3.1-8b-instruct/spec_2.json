@@ -1,0 +1,52 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "binding_table",
+  "credential_column": "actor_token_id",
+  "table": "team_tokens",
+  "credential_table_column": "id",
+  "holder_column": "team_id",
+  "source": "team_tokens"
+ },
+ "scopes": [
+  {
+   "name": "team",
+   "ref": "principal"
+  }
+ ],
+ "paths": [
+  {
+   "name": "issuer_in_team",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "audit_log",
+     "source": "audit_log",
+     "action_column": "event",
+     "grant_value": "team_tokens.created",
+     "revoke_value": "team_tokens.revoked",
+     "scope_column": "team_id",
+     "scope_ref": "principal",
+     "subject_expr": "actor_user_id",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_members",
+     "current_state_scope_column": "team_id",
+     "current_state_subject_column": "user_id",
+     "current_state_source": "team_members"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}
