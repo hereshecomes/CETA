@@ -1,0 +1,64 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "binding_event",
+  "credential_column": "user_id",
+  "table": "account_log",
+  "action_column": "activity",
+  "action_value": "token-created",
+  "credential_expr": "json_extract(params, '$.user_id')",
+  "holder_column": "actor_username",
+  "time_column": "ts",
+  "id_column": "id",
+  "source": "account_log"
+ },
+ "scopes": [
+  {
+   "name": "token_team",
+   "lookup_table": "tokens",
+   "lookup_key_expr": "json_extract(params, '$.user_id')",
+   "lookup_key_ref": "operation.user_id",
+   "lookup_value_expr": "team",
+   "source": "tokens"
+  }
+ ],
+ "paths": [
+  {
+   "name": "token_validity_and_team_membership",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "token_validity",
+     "source": "token_validity",
+     "subject_column": "user_id",
+     "subject_ref": "operation.user_id",
+     "from_column": "valid_from",
+     "to_column": "valid_to",
+     "id_column": "user_id"
+    },
+    {
+     "kind": "interval",
+     "table": "team_members",
+     "source": "team_members",
+     "subject_column": "username",
+     "subject_ref": "principal",
+     "scope_column": "team",
+     "scope_ref": "scope.token_team",
+     "from_column": "team",
+     "to_column": "team",
+     "id_column": "team"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}

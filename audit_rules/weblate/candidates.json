@@ -1,0 +1,669 @@
+{
+ "_note": "All compiled candidates for this application: K = 5 per model. dev_cg / test_cg are the correct-and-grounded rates on the development and test cases; *_unsupported are [unsupported verdicts, undecidable cases]. The selected candidate has the highest development c&g (ties -> lowest index). Invalid candidates have no specification file and score zero.",
+ "candidates": [
+  {
+   "model": "deepseek-r1-distill-qwen-32b",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 2,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/deepseek-r1-distill-qwen-32b/spec_0.json"
+  },
+  {
+   "model": "deepseek-r1-distill-qwen-32b",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 0.5,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.5,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/deepseek-r1-distill-qwen-32b/spec_1.json"
+  },
+  {
+   "model": "deepseek-r1-distill-qwen-32b",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/deepseek-r1-distill-qwen-32b/spec_2.json"
+  },
+  {
+   "model": "deepseek-r1-distill-qwen-32b",
+   "candidate": 3,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0909,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.09090909090909091,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/deepseek-r1-distill-qwen-32b/spec_3.json"
+  },
+  {
+   "model": "deepseek-r1-distill-qwen-32b",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 2,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/deepseek-r1-distill-qwen-32b/spec_4.json"
+  },
+  {
+   "model": "gemma-3-12b-it",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/gemma-3-12b-it/spec_0.json"
+  },
+  {
+   "model": "gemma-3-12b-it",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/gemma-3-12b-it/spec_1.json"
+  },
+  {
+   "model": "gemma-3-12b-it",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/gemma-3-12b-it/spec_2.json"
+  },
+  {
+   "model": "gemma-3-12b-it",
+   "candidate": 3,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/gemma-3-12b-it/spec_3.json"
+  },
+  {
+   "model": "gemma-3-12b-it",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/gemma-3-12b-it/spec_4.json"
+  },
+  {
+   "model": "llama-3.1-8b-instruct",
+   "candidate": 0,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "bad scope project lookup_key_ref: 'audit_log.project_id'",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "llama-3.1-8b-instruct",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/llama-3.1-8b-instruct/spec_1.json"
+  },
+  {
+   "model": "llama-3.1-8b-instruct",
+   "candidate": 2,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "bad scope project lookup_key_ref: 'audit_log.project_id'",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "llama-3.1-8b-instruct",
+   "candidate": 3,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "bad scope project lookup_key_ref: 'audit_log.project_id'",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "llama-3.1-8b-instruct",
+   "candidate": 4,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "bad scope project lookup_key_ref: 'audit_log.project_id'",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "qwen3-14b",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-14b/spec_0.json"
+  },
+  {
+   "model": "qwen3-14b",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-14b/spec_1.json"
+  },
+  {
+   "model": "qwen3-14b",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.7,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.7,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-14b/spec_2.json"
+  },
+  {
+   "model": "qwen3-14b",
+   "candidate": 3,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.4,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.4,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-14b/spec_3.json"
+  },
+  {
+   "model": "qwen3-14b",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.1364,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.13636363636363635,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-14b/spec_4.json"
+  },
+  {
+   "model": "qwen3-32b",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-32b/spec_0.json"
+  },
+  {
+   "model": "qwen3-32b",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-32b/spec_1.json"
+  },
+  {
+   "model": "qwen3-32b",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.5,
+   "dev_unsupported": [
+    36,
+    36
+   ],
+   "test_cg": 0.5,
+   "test_unsupported": [
+    54,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-32b/spec_2.json"
+  },
+  {
+   "model": "qwen3-32b",
+   "candidate": 3,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.7,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.7,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-32b/spec_3.json"
+  },
+  {
+   "model": "qwen3-32b",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3-32b/spec_4.json"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 1,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.5-9b/spec_0.json"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "candidate": 1,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "Expecting ',' delimiter: line 18 column 4 (char 429)",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "qwen3.5-9b",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 2,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 0.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.5-9b/spec_2.json"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "candidate": 3,
+   "valid": false,
+   "repairs_used": 2,
+   "validation_error": "no JSON object",
+   "selected": false,
+   "dev_cg": null,
+   "dev_unsupported": null,
+   "test_cg": null,
+   "test_unsupported": null,
+   "test_cases": null,
+   "spec_file": null
+  },
+  {
+   "model": "qwen3.5-9b",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 2,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 0.1364,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 0.13636363636363635,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.5-9b/spec_4.json"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "candidate": 0,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": true,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.8-27b/spec_0.json"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "candidate": 1,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.8-27b/spec_1.json"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "candidate": 2,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.8-27b/spec_2.json"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "candidate": 3,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.8-27b/spec_3.json"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "candidate": 4,
+   "valid": true,
+   "repairs_used": 0,
+   "validation_error": null,
+   "selected": false,
+   "dev_cg": 1.0,
+   "dev_unsupported": [
+    0,
+    36
+   ],
+   "test_cg": 1.0,
+   "test_unsupported": [
+    0,
+    54
+   ],
+   "test_cases": 180,
+   "spec_file": "specifications/qwen3.8-27b/spec_4.json"
+  }
+ ]
+}

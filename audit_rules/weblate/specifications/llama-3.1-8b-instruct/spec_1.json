@@ -1,0 +1,94 @@
+{
+ "operation": {
+  "table": "audit_log",
+  "id_column": "id",
+  "time_column": "ts"
+ },
+ "principal": {
+  "kind": "binding_table",
+  "credential_column": "user_id",
+  "table": "account_log",
+  "credential_table_column": "id",
+  "holder_column": "actor_username",
+  "source": "account_log"
+ },
+ "scopes": [
+  {
+   "name": "project",
+   "ref": "operation.project_id"
+  },
+  {
+   "name": "team",
+   "ref": "operation.team"
+  }
+ ],
+ "paths": [
+  {
+   "name": "validity_period",
+   "conditions": [
+    {
+     "kind": "interval",
+     "table": "token_validity",
+     "source": "token_validity",
+     "subject_column": "user_id",
+     "subject_ref": "principal",
+     "from_column": "valid_from",
+     "to_column": "valid_to",
+     "id_column": "user_id"
+    }
+   ]
+  },
+  {
+   "name": "team_membership",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "account_log",
+     "source": "account_log",
+     "action_column": "activity",
+     "grant_value": "team-add",
+     "revoke_value": "team-remove",
+     "scope_column": "team",
+     "scope_ref": "scope.team",
+     "subject_expr": "json_extract(params, '$.team')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_members",
+     "current_state_scope_column": "team",
+     "current_state_subject_column": "username",
+     "current_state_source": "team_members"
+    }
+   ]
+  },
+  {
+   "name": "creator_membership",
+   "conditions": [
+    {
+     "kind": "change_log",
+     "table": "account_log",
+     "source": "account_log",
+     "action_column": "activity",
+     "grant_value": "team-add",
+     "revoke_value": "team-remove",
+     "scope_column": "team",
+     "scope_ref": "scope.team",
+     "subject_expr": "json_extract(params, '$.team')",
+     "subject_ref": "principal",
+     "time_column": "ts",
+     "id_column": "id",
+     "current_state_table": "team_members",
+     "current_state_scope_column": "team",
+     "current_state_subject_column": "username",
+     "current_state_source": "team_members"
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "table": "source_coverage",
+  "source_column": "source",
+  "from_column": "covered_from",
+  "to_column": "covered_to"
+ }
+}
