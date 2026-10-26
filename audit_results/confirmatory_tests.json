@@ -1,0 +1,247 @@
+{
+ "note": "Confirmatory paired differences with Qwen3-32B. Ha: C - R, holds if the lower bound of the c&g difference exceeds -0.05; Hb: C - G*, holds if it exceeds 0; both require the upper bound of the unsupported-rate difference to be at most 0.05. Intervals: paired bootstrap clustered by base event, 10,000 draws, seed 20261020. 'core' / 'test_only' split Wagtail and Indico by pattern. The two earlier protocols compared C with the SQL agent (G1) on pretix and Weblate with three runs per model-based method.",
+ "tests": [
+  {
+   "app": "pretix",
+   "test": "Ha",
+   "contrast": "C - R",
+   "cg": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "pretix",
+   "test": "Hb",
+   "contrast": "C - G4",
+   "cg": {
+    "diff": 0.312,
+    "ci95": [
+     0.219,
+     0.406
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "weblate",
+   "test": "Ha",
+   "contrast": "C - R",
+   "cg": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "weblate",
+   "test": "Hb",
+   "contrast": "C - G4",
+   "cg": {
+    "diff": 0.488,
+    "ci95": [
+     0.392,
+     0.582
+    ]
+   },
+   "unsupported": {
+    "diff": -0.018,
+    "ci95": [
+     -0.058,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "wagtail",
+   "test": "Ha",
+   "contrast": "C - R",
+   "cg": {
+    "diff": -0.119,
+    "ci95": [
+     -0.185,
+     -0.06
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": false,
+   "core": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "test_only": {
+    "diff": -0.25,
+    "ci95": [
+     -0.35,
+     -0.15
+    ]
+   }
+  },
+  {
+   "app": "wagtail",
+   "test": "Hb",
+   "contrast": "C - G3",
+   "cg": {
+    "diff": 0.086,
+    "ci95": [
+     -0.015,
+     0.184
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": false,
+   "core": {
+    "diff": 0.249,
+    "ci95": [
+     0.156,
+     0.347
+    ]
+   },
+   "test_only": {
+    "diff": -0.092,
+    "ci95": [
+     -0.233,
+     0.058
+    ]
+   }
+  },
+  {
+   "app": "indico",
+   "test": "Ha",
+   "contrast": "C - R",
+   "cg": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "indico",
+   "test": "Hb",
+   "contrast": "C - G1",
+   "cg": {
+    "diff": 0.536,
+    "ci95": [
+     0.483,
+     0.59
+    ]
+   },
+   "unsupported": {
+    "diff": -0.682,
+    "ci95": [
+     -0.8,
+     -0.565
+    ]
+   },
+   "holds": true,
+   "core": {
+    "diff": 0.517,
+    "ci95": [
+     0.433,
+     0.599
+    ]
+   },
+   "test_only": {
+    "diff": 0.56,
+    "ci95": [
+     0.503,
+     0.616
+    ]
+   }
+  },
+  {
+   "app": "pretix",
+   "test": "earlier protocol",
+   "contrast": "C - G1",
+   "cg": {
+    "diff": 0.583,
+    "ci95": [
+     0.524,
+     0.635
+    ]
+   },
+   "unsupported": {
+    "diff": -0.028,
+    "ci95": [
+     -0.063,
+     0.0
+    ]
+   },
+   "holds": true
+  },
+  {
+   "app": "weblate",
+   "test": "earlier protocol",
+   "contrast": "C - G1",
+   "cg": {
+    "diff": 0.611,
+    "ci95": [
+     0.55,
+     0.671
+    ]
+   },
+   "unsupported": {
+    "diff": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "holds": true
+  }
+ ]
+}

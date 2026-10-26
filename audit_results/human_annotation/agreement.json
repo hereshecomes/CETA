@@ -1,0 +1,252 @@
+{
+ "all": {
+  "world_verdict": {
+   "n": 284,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_verdict": {
+   "n": 852,
+   "full_agreement": 0.9859154929577465,
+   "fleiss": 0.9891707304672771,
+   "alpha": 0.9891739080698394,
+   "cohen_min": 0.978306995060513,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 0.978306995060513,
+    "A1-A4": 1.0,
+    "A2-A3": 0.978306995060513,
+    "A2-A4": 1.0,
+    "A3-A4": 0.978306995060513
+   }
+  },
+  "view_decidability": {
+   "n": 852,
+   "full_agreement": 0.9859154929577465,
+   "fleiss": 0.9800491745697225,
+   "alpha": 0.9800550286851661,
+   "cohen_min": 0.9596705481397331,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 0.9596705481397331,
+    "A1-A4": 1.0,
+    "A2-A3": 0.9596705481397331,
+    "A2-A4": 1.0,
+    "A3-A4": 0.9596705481397331
+   }
+  }
+ },
+ "pretix": {
+  "world_verdict": {
+   "n": 48,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_verdict": {
+   "n": 144,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_decidability": {
+   "n": 144,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  }
+ },
+ "weblate": {
+  "world_verdict": {
+   "n": 60,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_verdict": {
+   "n": 180,
+   "full_agreement": 0.9333333333333333,
+   "fleiss": 0.9497066219614417,
+   "alpha": 0.9497764738753846,
+   "cohen_min": 0.9,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 0.9,
+    "A1-A4": 1.0,
+    "A2-A3": 0.9,
+    "A2-A4": 1.0,
+    "A3-A4": 0.9
+   }
+  },
+  "view_decidability": {
+   "n": 180,
+   "full_agreement": 0.9333333333333333,
+   "fleiss": 0.9267399267399268,
+   "alpha": 0.9268416768416768,
+   "cohen_min": 0.8507462686567164,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 0.8507462686567164,
+    "A1-A4": 1.0,
+    "A2-A3": 0.8507462686567164,
+    "A2-A4": 1.0,
+    "A3-A4": 0.8507462686567164
+   }
+  }
+ },
+ "wagtail": {
+  "world_verdict": {
+   "n": 88,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_verdict": {
+   "n": 264,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_decidability": {
+   "n": 264,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  }
+ },
+ "indico": {
+  "world_verdict": {
+   "n": 88,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_verdict": {
+   "n": 264,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  },
+  "view_decidability": {
+   "n": 264,
+   "full_agreement": 1.0,
+   "fleiss": 1.0,
+   "alpha": 1.0,
+   "cohen_min": 1.0,
+   "cohen_max": 1.0,
+   "pairs": {
+    "A1-A2": 1.0,
+    "A1-A3": 1.0,
+    "A1-A4": 1.0,
+    "A2-A3": 1.0,
+    "A2-A4": 1.0,
+    "A3-A4": 1.0
+   }
+  }
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "pretix": {
+  "worlds": 48,
+  "world_majority_eq_ledger": 48,
+  "world_unanimous": 48,
+  "world_uncertain_flags": 0,
+  "views": 144,
+  "view_majority_eq_ledger": 144,
+  "view_unanimous": 144,
+  "view_unanimous_eq_ledger": 144,
+  "annotator_view_eq_ledger": 576,
+  "dec_views": 96,
+  "proof_label_pairs": 384,
+  "proof_label_pairs_covered": 384,
+  "dec_views_majority_proof": 96
+ },
+ "Weblate": {
+  "worlds": 60,
+  "world_majority_eq_ledger": 60,
+  "world_unanimous": 60,
+  "world_uncertain_flags": 18,
+  "views": 180,
+  "view_majority_eq_ledger": 168,
+  "view_unanimous": 168,
+  "view_unanimous_eq_ledger": 168,
+  "annotator_view_eq_ledger": 684,
+  "dec_views": 126,
+  "proof_label_pairs": 468,
+  "proof_label_pairs_covered": 276,
+  "dec_views_majority_proof": 66
+ },
+ "Wagtail": {
+  "worlds": 88,
+  "world_majority_eq_ledger": 88,
+  "world_unanimous": 88,
+  "world_uncertain_flags": 0,
+  "views": 264,
+  "view_majority_eq_ledger": 264,
+  "view_unanimous": 264,
+  "view_unanimous_eq_ledger": 264,
+  "annotator_view_eq_ledger": 1056,
+  "dec_views": 246,
+  "proof_label_pairs": 984,
+  "proof_label_pairs_covered": 984,
+  "dec_views_majority_proof": 246
+ },
+ "Indico": {
+  "worlds": 88,
+  "world_majority_eq_ledger": 88,
+  "world_unanimous": 88,
+  "world_uncertain_flags": 0,
+  "views": 264,
+  "view_majority_eq_ledger": 264,
+  "view_unanimous": 264,
+  "view_unanimous_eq_ledger": 264,
+  "annotator_view_eq_ledger": 1056,
+  "dec_views": 198,
+  "proof_label_pairs": 792,
+  "proof_label_pairs_covered": 792,
+  "dec_views_majority_proof": 198
+ }
+}

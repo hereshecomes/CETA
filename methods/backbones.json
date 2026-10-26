@@ -1,0 +1,91 @@
+{
+ "_comment": "Model profiles for run_method.py --backbone. base_url points at a local OpenAI-compatible vLLM server; model is the served model name. 'thinking' sets chat_template_kwargs.enable_thinking (read by the Qwen templates only). 'merge_consecutive_roles' joins consecutive same-role messages before a call (Gemma 3 requires strict role alternation). 'chat_template_kwargs' is merged into every request.",
+ "qwen3-32b": {
+  "label": "B1",
+  "base_url": "http://127.0.0.1:8100",
+  "model": "qwen3-32b",
+  "thinking": true,
+  "thinking_mode": "template_flag",
+  "reasoning_expected": true,
+  "reasoning_parser": "qwen3",
+  "tensor_parallel": 2,
+  "chat_template_kwargs": {}
+ },
+ "qwen3.8-27b": {
+  "label": "B2",
+  "base_url": "http://127.0.0.1:8105",
+  "model": "qwen3.8-27b",
+  "thinking": true,
+  "thinking_mode": "template_flag",
+  "reasoning_expected": true,
+  "reasoning_parser": "qwen3",
+  "tensor_parallel": 2,
+  "text_only": true,
+  "chat_template_kwargs": {
+   "reasoning_effort": "medium"
+  },
+  "effort_levels": [
+   "low",
+   "medium",
+   "xhigh"
+  ]
+ },
+ "qwen3.5-9b": {
+  "label": "B3",
+  "base_url": "http://127.0.0.1:8106",
+  "model": "qwen3.5-9b",
+  "thinking": true,
+  "thinking_mode": "template_flag",
+  "reasoning_expected": true,
+  "reasoning_parser": "qwen3",
+  "tensor_parallel": 1,
+  "text_only": true,
+  "chat_template_kwargs": {}
+ },
+ "qwen3-14b": {
+  "label": "B4",
+  "base_url": "http://127.0.0.1:8101",
+  "model": "qwen3-14b",
+  "thinking": true,
+  "thinking_mode": "template_flag",
+  "reasoning_expected": true,
+  "reasoning_parser": "qwen3",
+  "tensor_parallel": 1,
+  "chat_template_kwargs": {}
+ },
+ "deepseek-r1-distill-qwen-32b": {
+  "label": "B5",
+  "base_url": "http://127.0.0.1:8102",
+  "model": "deepseek-r1-distill-qwen-32b",
+  "thinking": false,
+  "thinking_mode": "intrinsic",
+  "reasoning_expected": true,
+  "reasoning_parser": "deepseek_r1",
+  "tensor_parallel": 2,
+  "chat_template_kwargs": {}
+ },
+ "llama-3.1-8b-instruct": {
+  "label": "B6",
+  "base_url": "http://127.0.0.1:8103",
+  "model": "llama-3.1-8b-instruct",
+  "thinking": false,
+  "thinking_mode": "none",
+  "reasoning_expected": false,
+  "reasoning_parser": null,
+  "tensor_parallel": 1,
+  "chat_template_kwargs": {}
+ },
+ "gemma-3-12b-it": {
+  "label": "B7",
+  "base_url": "http://127.0.0.1:8104",
+  "model": "gemma-3-12b-it",
+  "thinking": false,
+  "thinking_mode": "none",
+  "reasoning_expected": false,
+  "reasoning_parser": null,
+  "tensor_parallel": 1,
+  "text_only": true,
+  "merge_consecutive_roles": true,
+  "chat_template_kwargs": {}
+ }
+}

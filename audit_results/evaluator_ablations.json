@@ -1,0 +1,481 @@
+{
+ "note": "Qwen3-32B, selected specification of each application. E1 closed world, E2 current state only, E3 no first change after t, E4 no snapshot fallback, E5 no coverage table. Rule variants: Rcw closed world, Rcs current state, Rnt no time limit, Rns no separation of duty (Wagtail). unsupported = [unsupported verdicts, undecidable cases]. E2 is undefined on Wagtail.",
+ "results": {
+  "pretix": {
+   "C": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "R": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "Rcw": {
+    "cg": 1.0,
+    "unsupported": [
+     48,
+     48
+    ]
+   },
+   "Rcs": {
+    "cg": 0.75,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "E1": {
+    "cg": 1.0,
+    "unsupported": [
+     48,
+     48
+    ]
+   },
+   "E2": {
+    "cg": 0.75,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "E3": {
+    "cg": 0.875,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "E4": {
+    "cg": 0.75,
+    "unsupported": [
+     0,
+     48
+    ]
+   },
+   "E5": {
+    "cg": 0.0,
+    "unsupported": [
+     0,
+     48
+    ]
+   }
+  },
+  "weblate": {
+   "C": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "R": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "Rcw": {
+    "cg": 1.0,
+    "unsupported": [
+     54,
+     54
+    ]
+   },
+   "Rcs": {
+    "cg": 0.8091,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "E1": {
+    "cg": 1.0,
+    "unsupported": [
+     54,
+     54
+    ]
+   },
+   "E2": {
+    "cg": 0.8091,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "E3": {
+    "cg": 0.9,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "E4": {
+    "cg": 0.7,
+    "unsupported": [
+     0,
+     54
+    ]
+   },
+   "E5": {
+    "cg": 0.0,
+    "unsupported": [
+     0,
+     54
+    ]
+   }
+  },
+  "wagtail": {
+   "C": {
+    "cg": 0.881,
+    "unsupported": [
+     0,
+     18
+    ]
+   },
+   "R": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     18
+    ]
+   },
+   "Rcw": {
+    "cg": 1.0,
+    "unsupported": [
+     18,
+     18
+    ]
+   },
+   "Rnt": {
+    "cg": 0.5,
+    "unsupported": [
+     0,
+     18
+    ]
+   },
+   "Rns": {
+    "cg": 0.9524,
+    "unsupported": [
+     0,
+     18
+    ]
+   },
+   "E1": {
+    "cg": 0.7381,
+    "unsupported": [
+     18,
+     18
+    ],
+    "cg_minus_C": {
+     "diff": -0.1429,
+     "ci95": [
+      -0.2126,
+      -0.0744
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    },
+    "cases_changed": 48,
+    "verdict_transitions": {
+     "self_approval:authorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "self_approval:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "stale_submission:authorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "revision_mismatch:unauthorized:answerable:insufficient_evidence->unauthorized": 30
+    }
+   },
+   "E3": {
+    "cg": 0.881,
+    "unsupported": [
+     0,
+     18
+    ],
+    "cg_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 0,
+    "verdict_transitions": {}
+   },
+   "E4": {
+    "cg": 0.881,
+    "unsupported": [
+     0,
+     18
+    ],
+    "cg_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 0,
+    "verdict_transitions": {}
+   },
+   "E5": {
+    "cg": 0.0,
+    "unsupported": [
+     0,
+     18
+    ],
+    "cg_minus_C": {
+     "diff": -0.881,
+     "ci95": [
+      -0.9405,
+      -0.8154
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 216,
+    "verdict_transitions": {
+     "approval_order:authorized:answerable:authorized->insufficient_evidence": 18,
+     "approval_order:unauthorized:answerable:unauthorized->insufficient_evidence": 18,
+     "self_approval:authorized:answerable:authorized->insufficient_evidence": 12,
+     "self_approval:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "stale_submission:authorized:answerable:authorized->insufficient_evidence": 12,
+     "stale_submission:unauthorized:answerable:unauthorized->insufficient_evidence": 18,
+     "other_page:authorized:answerable:authorized->insufficient_evidence": 18,
+     "other_page:unauthorized:answerable:unauthorized->insufficient_evidence": 18,
+     "revision_mismatch:authorized:answerable:authorized->insufficient_evidence": 30,
+     "resubmission:authorized:answerable:authorized->insufficient_evidence": 30,
+     "resubmission:unauthorized:answerable:unauthorized->insufficient_evidence": 30
+    }
+   }
+  },
+  "indico": {
+   "C": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     66
+    ]
+   },
+   "R": {
+    "cg": 1.0,
+    "unsupported": [
+     0,
+     66
+    ]
+   },
+   "Rcw": {
+    "cg": 1.0,
+    "unsupported": [
+     66,
+     66
+    ]
+   },
+   "Rcs": {
+    "cg": 0.5682,
+    "unsupported": [
+     66,
+     66
+    ]
+   },
+   "E1": {
+    "cg": 1.0,
+    "unsupported": [
+     66,
+     66
+    ],
+    "cg_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    },
+    "cases_changed": 66,
+    "verdict_transitions": {
+     "event_removal_order:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "event_grant_order:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "category_scope:authorized:unanswerable:insufficient_evidence->authorized": 6,
+     "category_scope:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "category_removal_order:authorized:unanswerable:insufficient_evidence->authorized": 6,
+     "category_removal_order:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "team_handover:authorized:unanswerable:insufficient_evidence->authorized": 10,
+     "team_handover:unauthorized:unanswerable:insufficient_evidence->unauthorized": 10,
+     "readd:unauthorized:unanswerable:insufficient_evidence->unauthorized": 10
+    }
+   },
+   "E2": {
+    "cg": 0.5682,
+    "unsupported": [
+     66,
+     66
+    ],
+    "cg_minus_C": {
+     "diff": -0.4318,
+     "ci95": [
+      -0.4769,
+      -0.3781
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    },
+    "cases_changed": 148,
+    "verdict_transitions": {
+     "event_removal_order:authorized:answerable:authorized->unauthorized": 18,
+     "event_removal_order:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "event_grant_order:unauthorized:answerable:unauthorized->authorized": 12,
+     "event_grant_order:unauthorized:unanswerable:insufficient_evidence->authorized": 6,
+     "category_scope:authorized:unanswerable:insufficient_evidence->authorized": 6,
+     "category_scope:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "category_removal_order:authorized:answerable:authorized->unauthorized": 12,
+     "category_removal_order:authorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "category_removal_order:unauthorized:unanswerable:insufficient_evidence->unauthorized": 6,
+     "team_handover:authorized:unanswerable:insufficient_evidence->authorized": 10,
+     "team_handover:unauthorized:answerable:unauthorized->authorized": 20,
+     "team_handover:unauthorized:unanswerable:insufficient_evidence->authorized": 10,
+     "readd:unauthorized:answerable:unauthorized->authorized": 20,
+     "readd:unauthorized:unanswerable:insufficient_evidence->authorized": 10
+    }
+   },
+   "E3": {
+    "cg": 0.7068,
+    "unsupported": [
+     0,
+     66
+    ],
+    "cg_minus_C": {
+     "diff": -0.2932,
+     "ci95": [
+      -0.345,
+      -0.2409
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 54,
+    "verdict_transitions": {
+     "event_removal_order:authorized:answerable:authorized->insufficient_evidence": 6,
+     "event_grant_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "category_removal_order:authorized:answerable:authorized->insufficient_evidence": 6,
+     "team_handover:unauthorized:answerable:unauthorized->insufficient_evidence": 20,
+     "readd:unauthorized:answerable:unauthorized->insufficient_evidence": 10
+    }
+   },
+   "E4": {
+    "cg": 0.4114,
+    "unsupported": [
+     0,
+     66
+    ],
+    "cg_minus_C": {
+     "diff": -0.5886,
+     "ci95": [
+      -0.6181,
+      -0.5592
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 110,
+    "verdict_transitions": {
+     "event_removal_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "event_grant_order:authorized:answerable:authorized->insufficient_evidence": 6,
+     "event_grant_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "category_scope:authorized:answerable:authorized->insufficient_evidence": 6,
+     "category_scope:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "category_removal_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "team_handover:authorized:answerable:authorized->insufficient_evidence": 10,
+     "team_handover:unauthorized:answerable:unauthorized->insufficient_evidence": 10,
+     "readd:authorized:answerable:authorized->insufficient_evidence": 10,
+     "readd:unauthorized:answerable:unauthorized->insufficient_evidence": 20
+    }
+   },
+   "E5": {
+    "cg": 0.0,
+    "unsupported": [
+     0,
+     66
+    ],
+    "cg_minus_C": {
+     "diff": -1.0,
+     "ci95": [
+      -1.0,
+      -1.0
+     ]
+    },
+    "unsupported_minus_C": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "cases_changed": 198,
+    "verdict_transitions": {
+     "event_removal_order:authorized:answerable:authorized->insufficient_evidence": 18,
+     "event_removal_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "event_grant_order:authorized:answerable:authorized->insufficient_evidence": 18,
+     "event_grant_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "category_scope:authorized:answerable:authorized->insufficient_evidence": 12,
+     "category_scope:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "category_removal_order:authorized:answerable:authorized->insufficient_evidence": 12,
+     "category_removal_order:unauthorized:answerable:unauthorized->insufficient_evidence": 12,
+     "team_handover:authorized:answerable:authorized->insufficient_evidence": 20,
+     "team_handover:unauthorized:answerable:unauthorized->insufficient_evidence": 20,
+     "readd:authorized:answerable:authorized->insufficient_evidence": 30,
+     "readd:unauthorized:answerable:unauthorized->insufficient_evidence": 20
+    }
+   }
+  }
+ }
+}

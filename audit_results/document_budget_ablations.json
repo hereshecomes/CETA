@@ -1,0 +1,323 @@
+{
+ "note": "Qwen3-32B, pretix and Weblate. Document ablations: E11 schema.md replaced by the raw DDL, E12 policy paraphrased without table or column names, E14 policy without its application-semantics passages; C and G* both see the modified documents. E15 varies the query budget. cg = correct-and-grounded rate; G* is the timeline agent G4. Intervals: paired bootstrap clustered by base event.",
+ "documents": {
+  "pretix": {
+   "original": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 1.0,
+     "1": 0.75,
+     "2": 0.75,
+     "3": 1.0,
+     "4": 1.0
+    },
+    "selected": 0,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": null,
+    "G_star_cg": 0.688,
+    "G_star_unsupported_rate": "0.0%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.312,
+     "ci95": [
+      0.219,
+      0.406
+     ]
+    }
+   },
+   "E11": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 1.0,
+     "1": 1.0,
+     "2": 0.0,
+     "3": 1.0,
+     "4": 0.0
+    },
+    "selected": 0,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "G_star_cg": 0.646,
+    "G_star_unsupported_rate": "2.1%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.354,
+     "ci95": [
+      0.271,
+      0.438
+     ]
+    }
+   },
+   "E12": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 0.0,
+     "1": 0.0,
+     "2": 0.0,
+     "3": 0.0,
+     "4": 0.0781
+    },
+    "selected": 4,
+    "C_test_cg": 0.146,
+    "C_minus_C_original": {
+     "diff": -0.854,
+     "ci95": [
+      -0.927,
+      -0.771
+     ]
+    },
+    "G_star_cg": 0.219,
+    "G_star_unsupported_rate": "8.3%",
+    "C_minus_G_star_same_documents": {
+     "diff": -0.073,
+     "ci95": [
+      -0.167,
+      0.021
+     ]
+    }
+   },
+   "E14": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 1.0,
+     "1": 1.0,
+     "2": 0.75,
+     "3": 0.75,
+     "4": 1.0
+    },
+    "selected": 0,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "G_star_cg": 0.542,
+    "G_star_unsupported_rate": "0.0%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.458,
+     "ci95": [
+      0.354,
+      0.562
+     ]
+    }
+   }
+  },
+  "weblate": {
+   "original": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 1.0,
+     "1": 1.0,
+     "2": 0.5,
+     "3": 0.7,
+     "4": 1.0
+    },
+    "selected": 0,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": null,
+    "G_star_cg": 0.512,
+    "G_star_unsupported_rate": "1.9%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.488,
+     "ci95": [
+      0.392,
+      0.582
+     ]
+    }
+   },
+   "E11": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 0.7,
+     "1": 1.0,
+     "2": 0.7,
+     "3": 0.7,
+     "4": 0.8091
+    },
+    "selected": 1,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "G_star_cg": 0.521,
+    "G_star_unsupported_rate": "1.9%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.479,
+     "ci95": [
+      0.398,
+      0.566
+     ]
+    }
+   },
+   "E12": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 0.7,
+     "1": 1.0,
+     "2": 0.1364,
+     "3": 0.7,
+     "4": 0.8091
+    },
+    "selected": 1,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "G_star_cg": 0.325,
+    "G_star_unsupported_rate": "0.0%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.675,
+     "ci95": [
+      0.585,
+      0.768
+     ]
+    }
+   },
+   "E14": {
+    "valid_candidates": "5 / 5",
+    "dev_cg_per_candidate": {
+     "0": 0.5,
+     "1": 1.0,
+     "2": 0.7,
+     "3": 1.0,
+     "4": 0.1364
+    },
+    "selected": 1,
+    "C_test_cg": 1.0,
+    "C_minus_C_original": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "G_star_cg": 0.596,
+    "G_star_unsupported_rate": "0.0%",
+    "C_minus_G_star_same_documents": {
+     "diff": 0.404,
+     "ci95": [
+      0.322,
+      0.48
+     ]
+    }
+   }
+  }
+ },
+ "budget": {
+  "pretix": {
+   "6": {
+    "C_cg": 1.0,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 3.83,
+    "C_cases_differing_from_budget_12": "0 / 144",
+    "G_star_cg": 0.594,
+    "G_star_unsupported_rate": "6.2%",
+    "G_star_queries_per_case": 3.61,
+    "C_minus_G_star": {
+     "diff": 0.406,
+     "ci95": [
+      0.323,
+      0.5
+     ]
+    }
+   },
+   "12": {
+    "C_cg": 1.0,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 3.83,
+    "C_cases_differing_from_budget_12": null,
+    "G_star_cg": 0.688,
+    "G_star_unsupported_rate": "0.0%",
+    "G_star_queries_per_case": 3.52,
+    "C_minus_G_star": {
+     "diff": 0.312,
+     "ci95": [
+      0.219,
+      0.406
+     ]
+    }
+   },
+   "24": {
+    "C_cg": 1.0,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 3.83,
+    "C_cases_differing_from_budget_12": "0 / 144",
+    "G_star_cg": 0.708,
+    "G_star_unsupported_rate": "4.2%",
+    "G_star_queries_per_case": 3.49,
+    "C_minus_G_star": {
+     "diff": 0.292,
+     "ci95": [
+      0.198,
+      0.385
+     ]
+    }
+   }
+  },
+  "weblate": {
+   "6": {
+    "C_cg": 0.609,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 5.67,
+    "C_cases_differing_from_budget_12": "48 / 180",
+    "G_star_cg": 0.545,
+    "G_star_unsupported_rate": "0.0%",
+    "G_star_queries_per_case": 4.79,
+    "C_minus_G_star": {
+     "diff": 0.064,
+     "ci95": [
+      -0.096,
+      0.223
+     ]
+    }
+   },
+   "12": {
+    "C_cg": 1.0,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 5.93,
+    "C_cases_differing_from_budget_12": null,
+    "G_star_cg": 0.512,
+    "G_star_unsupported_rate": "1.9%",
+    "G_star_queries_per_case": 4.69,
+    "C_minus_G_star": {
+     "diff": 0.488,
+     "ci95": [
+      0.392,
+      0.582
+     ]
+    }
+   },
+   "24": {
+    "C_cg": 1.0,
+    "C_unsupported_rate": "0.0%",
+    "C_queries_per_case": 5.93,
+    "C_cases_differing_from_budget_12": "0 / 180",
+    "G_star_cg": 0.47,
+    "G_star_unsupported_rate": "0.0%",
+    "G_star_queries_per_case": 4.69,
+    "C_minus_G_star": {
+     "diff": 0.529,
+     "ci95": [
+      0.441,
+      0.613
+     ]
+    }
+   }
+  }
+ }
+}
